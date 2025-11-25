@@ -48,8 +48,6 @@ const Magnet = ({ isNorth }) => {
     <group>
       <mesh 
         geometry=${geometry} 
-        castShadow 
-        receiveShadow
       >
         <meshStandardMaterial 
           color=${isNorth ? COLORS.magnetN : COLORS.magnetS} 

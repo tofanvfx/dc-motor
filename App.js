@@ -16,8 +16,6 @@ const SceneContent = ({ speed, showField, isRunning }) => {
     <directionalLight 
       position=${[10, 20, 15]} 
       intensity=${1.2} 
-      castShadow 
-      shadow-mapSize=${[2048, 2048]} 
     />
     <directionalLight position=${[-10, 10, -10]} intensity=${0.5} />
 
@@ -26,11 +24,6 @@ const SceneContent = ({ speed, showField, isRunning }) => {
     <${Circuit} />
     
     ${showField && html`<${FieldLines} />`}
-    
-    <mesh rotation=${[-Math.PI / 2, 0, 0]} position=${[0, -10, 0]} receiveShadow>
-      <planeGeometry args=${[100, 100]} />
-      <shadowMaterial opacity=${0.2} />
-    </mesh>
   `;
 };
 
@@ -42,7 +35,6 @@ export default function App() {
   return html`
     <div className="relative w-full h-screen bg-sky-300 overflow-hidden">
         <${Canvas}
-            shadows
             camera=${{ position: [0, 10, 25], fov: 45 }}
             style=${{ background: COLORS.background }}
         >

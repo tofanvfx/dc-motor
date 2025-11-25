@@ -1,0 +1,5 @@
+{
+  "name": "3D DC Motor Simulation",
+  "description": "A refined React and Three.js simulation of a DC motor with interactive controls, refactored from a static HTML prototype.",
+  "requestFramePermissions": []
+}
